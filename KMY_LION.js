@@ -14,11 +14,11 @@ function toggle() {
   const image = document.getElementById("toggle_image");
   const buttonText = document.querySelector(".login_status");
   if (toggleImg === "img1") {
-    image.src = "/img/icon_check.png";
+    image.src = "./img/icon_check.png";
     buttonText.style.color = "#2e80ec";
     toggleImg = "img2";
   } else {
-    image.src = "/img/icon_check_empty.png";
+    image.src = "/.img/icon_check_empty.png";
     buttonText.style.color = "#6f6f6f";
     toggleImg = "img1";
   }
