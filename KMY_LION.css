@@ -1,0 +1,153 @@
+:root {
+  --login: #2e80ec;
+  --google: #afafaf;
+  --facebook: #86c5e9;
+  --naver: #57d261;
+  --kakao: #f4d575;
+  --gray: #6f6f6f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.btn {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+body {
+  border: 0.5px solid var(--gray);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 50vh;  
+  /* min-height 체크  */
+}
+
+header {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+}
+header .header_content {
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+header .header_content h1 {
+  font-size: 1.125rem;
+  width: 100%;
+  flex: 1 1;
+}
+
+header .header_content button {
+  position: absolute;
+  right: 0;
+}
+
+.header_line {
+  margin-top: 20px;
+  height: 0.5px;
+  background-color: var(--gray);
+  max-width: 500px;
+}
+
+#login {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+#login h2 {
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+#login .login_status {
+  display: flex;
+  max-width: 140px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin: 20px 0;
+  color: var(--gray);
+}
+
+#login .login_btn {
+  background-color: var(--login);
+  padding: 15px 0;
+  color: white;
+  font-size: 1.25rem;
+  border-radius: 5px;
+}
+
+.or {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.or button,
+.or div {
+  color: var(--gray);
+}
+
+.contour {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  padding: 20px 20px;
+}
+
+.contour .line_txt {
+  padding: 0 1rem;
+  font-size: 14px;
+}
+.contour .line {
+  flex: 1;
+  height: 0.5px;
+  background-color: var(--gray);
+}
+
+#address_link {
+  max-width: 500px;
+  padding: 20px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#address_link button {
+  align-items: center;
+  margin: 4px auto;
+  position: relative;
+  width: 100%;
+  padding: 13px 0;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+#address_link button img {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#address_link .btn1 {
+  border-color: var(--google);
+}
+#address_link .btn2 {
+  border-color: var(--facebook);
+}
+#address_link .btn3 {
+  border-color: var(--naver);
+}
+#address_link .btn4 {
+  border-color: var(--kakao);
+}
+
+
