@@ -18,7 +18,7 @@ function toggle() {
     buttonText.style.color = "#2e80ec";
     toggleImg = "img2";
   } else {
-    image.src = "/.img/icon_check_empty.png";
+    image.src = "./img/icon_check_empty.png";
     buttonText.style.color = "#6f6f6f";
     toggleImg = "img1";
   }
