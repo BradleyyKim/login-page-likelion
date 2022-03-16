@@ -16,10 +16,12 @@ function toggle() {
   if (toggleImg === "img1") {
     image.src = "./img/icon_check.png";
     buttonText.style.color = "#2e80ec";
+    buttonText.style.fontWeight = "bold";
     toggleImg = "img2";
   } else {
     image.src = "./img/icon_check_empty.png";
     buttonText.style.color = "#6f6f6f";
+    buttonText.style.fontWeight = "normal";
     toggleImg = "img1";
   }
 }

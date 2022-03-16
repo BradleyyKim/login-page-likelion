@@ -1,3 +1,4 @@
+/* default  */
 :root {
   --login: #2e80ec;
   --google: #afafaf;
@@ -10,96 +11,143 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
-
-.btn {
+a {
+  text-decoration: none;
+  outline: none;
+  color: var(--gray);
+}
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+}
+button {
+  border: none;
   background-color: transparent;
-  border: transparent;
   cursor: pointer;
 }
 body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* start */
+#login {
   border: 0.5px solid var(--gray);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: 0 auto;
-  min-height: 50vh;  
-  /* min-height 체크  */
-}
-
-header {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px 20px 0 20px;
-}
-header .header_content {
-  position: relative;
-  display: flex;
-  text-align: center;
-}
-header .header_content h1 {
-  font-size: 1.125rem;
   width: 100%;
-  flex: 1 1;
+  margin: 0 auto;
+  min-height: 50vh;
+  margin: 100px auto;
 }
 
-header .header_content button {
+/* header */
+
+#login header {
+  max-width: 100%;
+  height: 50px;
+  border-bottom: 0.5px solid var(--gray);
+  position: relative;
+}
+
+#login header h1 {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: 50px;
+}
+#login header .exitBtn {
   position: absolute;
-  right: 0;
+  right: 20px;
+  height: 18px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
-.header_line {
-  margin-top: 20px;
-  height: 0.5px;
-  background-color: var(--gray);
-  max-width: 500px;
-}
+/* main */
 
-#login {
-  padding: 20px 20px;
+main {
+  padding: 20px;
+}
+.formBox {
   display: flex;
   flex-direction: column;
 }
-#login h2 {
+
+.formBox h2 {
   text-align: left;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: normal;
+  margin: 0 0 20px;
 }
 
-#login .login_status {
-  display: flex;
-  max-width: 140px;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  margin: 20px 0;
-  color: var(--gray);
-}
-
-#login .login_btn {
+.formBox form .login_btn {
   background-color: var(--login);
   padding: 15px 0;
   color: white;
   font-size: 1.25rem;
   border-radius: 5px;
+  line-height: 1;
+  width: 100%;
+}
+.formBox form .checkBox {
+  max-width: 130px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+.formBox form .checkBox input {
+  display: none;
+}
+.formBox form .checkBox input[type="checkbox"]:checked + .checkIcon {
+  background-image: url(./img/icon_check.png);
+}
+.formBox form .checkBox input[type="checkbox"]:checked + .checkIcon + p {
+  color: #2e80ec;
+}
+.formBox form .checkBox .checkIcon {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  background: url(./img/icon_check_empty.png) no-repeat center;
+  cursor: pointer;
+}
+.formBox form .checkBox p {
+  cursor: pointer;
+  line-height: 1;
 }
 
-.or {
+.signUp {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 15px;
 }
-
-.or button,
-.or div {
+.signUp a {
   color: var(--gray);
+}
+.signUp .stick {
+  width: 1.25px;
+  height: 12px;
+  text-align: center;
+  background-color: var(--gray);
+  margin: 0 10px;
 }
 
 .contour {
   display: flex;
   align-items: center;
   color: var(--gray);
-  padding: 20px 20px;
+  padding-bottom: 8px;
 }
 
 .contour .line_txt {
@@ -112,42 +160,47 @@ header .header_content button {
   background-color: var(--gray);
 }
 
-#address_link {
+.address_link {
   max-width: 500px;
-  padding: 20px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 
-#address_link button {
+.address_link li {
   align-items: center;
-  margin: 4px auto;
+  margin-bottom: 8px;
   position: relative;
   width: 100%;
   padding: 13px 0;
   justify-content: center;
   border-radius: 5px;
   border: 1px solid;
+  color: #000;
+  font-size: 15px;
+}
+.address_link li:last-child {
+  margin-bottom: 0;
+}
+.address_link a:last-child {
+  margin-bottom: 0;
 }
 
-#address_link button img {
+.address_link a img {
   position: absolute;
   left: 3%;
   top: 50%;
   transform: translate(0, -50%);
 }
-#address_link .btn1 {
+.address_link .google_link {
   border-color: var(--google);
 }
-#address_link .btn2 {
+.address_link .facebook_link {
   border-color: var(--facebook);
 }
-#address_link .btn3 {
+.address_link .naver_link {
   border-color: var(--naver);
 }
-#address_link .btn4 {
+.address_link .kakao_link {
   border-color: var(--kakao);
 }
-
-
